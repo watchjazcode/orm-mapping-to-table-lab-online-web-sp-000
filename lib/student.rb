@@ -33,8 +33,10 @@ class Student
   return self
   end
 
+  #Student.create(name: "Sally", grade: "10th")
+
   def self.create(attributes)
-    Student.new(attributes).save
+    Student.new(attributes["name"], attributes["grade"]).save
   end
 
 end
